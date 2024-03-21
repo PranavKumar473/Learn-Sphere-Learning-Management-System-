@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Index Page</title>
+	<style>
+		
+		
+		
+		
+		body {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			padding: 0;
+			margin: 0;
+			background: linear-gradient(180deg, #FAF0D7, #ADC4CE);
+		}
+
+		nav,
+		.nav-links {
+			display: flex;
+		}
+
+		nav {
+			justify-content: space-between;
+			margin: 20px 5%;
+			align-items: center;
+			height: 10vh;
+			background-color: rgba(255, 255, 255, 0.8);
+			border-radius: 10px;
+			padding: 10px;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		}
+
+		.nav-links {
+			gap: 2rem;
+			list-style: none;
+			font-size: 1.5rem;
+			font-weight: 600;
+			margin: 0;
+		}
+
+		a {
+			color: black;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: indigo;
+		}
+
+		.logo {
+			font-size: 2rem;
+			font-weight: 900;
+		}
+
+		.main-page {
+			width: 90%;
+			margin: 20px 5%;
+			padding: 2%;
+			font-size: 18px;
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+			background-color: rgba(255, 255, 255, 0.8);
+			border-radius: 10px;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		}
+
+		.heading {
+			width: 100%;
+			border-radius: 5px;
+			padding: 20px;
+			font-size: 18px;
+			background-color: #FAF0D7;
+			border-bottom: 2px solid #ADC4CE;
+		}
+
+		.container {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+		}
+
+		.content {
+			border-radius: 10px;
+			width: 100%;
+			padding: 20px;
+			background-color: #FAF0D7;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		}
+
+		.content h2 {
+			color: indigo;
+		}
+
+		.content .details {
+			padding-right: 20px;
+			text-align: justify;
+		}
+
+		/* ... (previous styles) */
+
+		/* Navigation link hover effects */
+		.nav-links a:hover {
+			color: #ffffff;
+			/* Change text color on hover */
+			background-color: darkorange;
+			/* Add a background color on hover */
+			transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+			/* Add a smooth transition effect */
+		}
+
+		/* ... (rest of the styles) */
+
+
+
+		/* Media Query for tablets and smaller screens */
+		@media only screen and (max-width: 768px) {
+			.nav-links {
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.logo {
+				text-align: center;
+			}
+
+			.main-page {
+				padding: 5%;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<nav id="desktop-nav">
+		<div class="logo">LearnSphere</div>
+		<div>
+			<ul class="nav-links">
+				<li><a href="/register">Register</a></li>
+				<li><a href="/login">Login</a></li>
+				<li><a href="#aboutus">About Us</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="main-page">
+		<div class="heading">
+			<h3>Embark on a transformative learning journey with LearnSphere, where education meets opportunity,
+				and empower yourself for a brighter future filled with knowledge and thriving job opportunities.</h3>
+		</div>
+		<div class="container">
+			<div id="full-stack" class="content">
+				<h2>Full-Stack Development</h2>
+				<div class="details">
+					<ul>
+						<li>Our comprehensive full stack development training program equips you with the skills needed
+							to create end-to-end web applications.</li>
+
+						<li>Join our intensive full stack development training and master both front-end and back-end
+							technologies.</li>
+
+						<li>Our full stack development training covers a wide range of programming languages,
+							frameworks, and databases to make you a well-rounded developer.</li>
+
+						<li>Learn to seamlessly integrate user interfaces and server-side logic through hands-on full
+							stack development training.</li>
+
+						<li>Our experienced instructors guide you through real-world projects, enabling you to apply
+							your full stack development skills in practical scenarios.</li>
+					</ul>
+				</div>
+			</div>
+			<div id="testing" class="content">
+				<h2>Software Automation Testing</h2>
+				<div class="details">
+					<ul>
+						<li>Our software automation testing training program equips you with the expertise to automate
+							testing processes and ensure software quality.</li>
+
+						<li>Join our hands-on software automation testing training to learn how to develop and execute
+							automated test scripts efficiently.</li>
+
+						<li>From test planning to script development, our software automation testing training covers
+							the entire automation lifecycle.</li>
+
+						<li>Enroll in our software automation testing training to master popular automation tools and
+							frameworks used in the industry.</li>
+
+						<li>Our experienced trainers guide you through creating robust automated test suites that
+							enhance the reliability of software applications.</li>
+					</ul>
+				</div>
+			</div>
+
+
+</body>
+
+</html>

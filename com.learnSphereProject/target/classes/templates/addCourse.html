@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Course</title>
+<style>
+	
+      
+      
+	body{
+		font-family: Georgia, 'Times New Roman', Times, serif;
+		height: 98vh;
+		font-size: 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		background: linear-gradient(65deg, #FAF0D7 , #ADC4CE);
+		gap: 200px;
+		}
+		
+		
+		nav,.nav-links{
+    display: flex;
+}
+
+nav{
+    justify-content: space-around;
+    margin: 0px 45px 0px;
+    align-items: flex-start;
+    height: 10vh;
+    gap: 45rem;
+}
+
+.nav-links{
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+a{
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover{
+    color: black ;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-color: indigo;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: 900;
+    width: 800px;
+}
+
+.logo:hover{
+    cursor: default;
+}
+		
+		form{
+			position: relative;
+			height: 400px;
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+			justify-content: space-evenly;
+			font-size: 30px;
+		}
+		
+		.input-box{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			gap: 50px;
+		}
+		
+		.input-box input{
+			font-size: 30px;
+			height: 35px;
+			width: 400px;
+			border: 1px solid black;
+			border-radius: 3px;
+			box-shadow: 0 0 5px 1px black;
+		}
+		
+		.input-box label{
+			font-weight: 700;
+			text-decoration: underline;
+			text-underline-offset: 5px;
+		}
+		
+		.button{
+			background: #FAF0D7;
+			height: 40px;
+			font-size: 20px;
+			font-weight: 700;
+			transition: 0.3s;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+		
+		.button:hover{
+			box-shadow: 0 0 10px 2px black;
+			transform: translateY(5px);
+		}
+		
+</style>
+</head>
+<body>
+	
+	<nav id="desktop-nav">
+        <div class="logo">LearnSphere</div>
+        <div>
+            <ul class="nav-links">
+               
+                <li><a href="/index">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+	
+	<form action="/addCourse" method="post">
+		<div class="input-box">
+		<label>Course ID:</label>
+		<input type="text" name="courseId" pattern="[A-Za-z0-9]+" required>
+		</div>
+		<div class="input-box">
+		<label>Course Name:</label>
+		<input type="text" name="courseName" required>
+		</div>
+		<div class="input-box">
+		<label>Course Price:</label>
+		<input type="text" name="coursePrice" required>
+		</div>
+		<input type="submit" class="button" value="ADD COURSE">
+	</form>
+</body>
+</html>

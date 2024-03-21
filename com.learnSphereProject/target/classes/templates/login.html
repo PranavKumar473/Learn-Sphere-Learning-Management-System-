@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+<style>
+	
+      
+	
+	body{
+		font-family: Georgia, 'Times New Roman', Times, serif;
+		height: 98vh;
+		font-size: 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		background: linear-gradient(180deg, #FAF0D7 , #ADC4CE);
+	}
+	form{
+		border: 2px solid black;
+		box-shadow: 0 0 10px 2px;
+		padding: 20px;
+		height: 300px;
+		width: 400px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		gap: 30px;
+	}
+	
+	label{
+		width: 150px;
+	}
+	.input-data{
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+		gap: 5px;
+	}
+	
+	.text-fields{
+		border-radius: 5px;
+		height: 22px;
+		width: 220px;
+	}
+	
+	button{
+		font-size: 20px;
+		width: 150px;
+		height: 50px;
+		font-family: fantasy;
+		font-size: 18px;
+		border-radius: 10px;
+		background-color: #ADC4CE;
+		cursor: pointer;
+	}
+	
+	button:hover{
+		box-shadow: 0 0 10px 2px #000000;
+		transform: translateY(-3px);
+		transition: 0.3s;
+	}
+	
+	nav, 
+.nav-links{
+    display: flex;
+}
+
+nav{
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+}
+
+.nav-links{
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+a{
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover{
+    color: black ;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-color: indigo;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: 900;
+    width: 1200px;
+}
+
+.logo:hover{
+    cursor: default;
+}
+
+.main-page{
+	height: 90vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.message label{
+	color: red;
+}
+
+
+
+.text-fields {
+			border-radius: 5px;
+			font-size: 17px;
+			height: 22px;
+			width: 250px;
+			
+		}
+
+</style>
+</head>
+<body>
+	<nav id="desktop-nav">
+        <div class="logo">LearnSphere</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="/index">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#aboutus">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="/register">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+	<div class="main-page">
+	<form action="/validateUser" method="post">
+		<div class="input-data">
+		<label>Email</label>
+		<input type="text" class="text-fields" name="email" required>
+		</div>
+		<div class="input-data">
+		<label>Password</label>
+		<input type="password" class="text-fields" name="password" required>
+		</div>
+		
+		
+		
+		
+		<button type="submit">Login</button>
+		<div class="message">
+			<label th:text = "${errorMessage}"></label>
+		</div>
+		<a href="/register">Not an User? Register here</a>
+	</form>
+	</div>
+	
+	
+</body>
+</html>

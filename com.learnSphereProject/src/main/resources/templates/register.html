@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Register Page</title>
+	<style>
+		
+      
+
+		body {
+			font-family: Georgia, 'Times New Roman', Times, serif;
+			background: linear-gradient(180deg, #FAF0D7, #ADC4CE);
+			height: 98.3vh;
+			font-size: 20px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			align-items: center;
+			padding: 0;
+		}
+
+		.main-page {
+			height: 90vh;
+			width: 100%;
+			font-size: 20px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+			padding: 0;
+		}
+
+		form {
+			border: 2px solid black;
+			box-shadow: 0 0 10px 2px;
+			padding: 50px;
+			width: 600px;
+			height: 70%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 30px;
+		}
+
+		label {
+			width: 150px;
+			font-weight: 700;
+		}
+
+		.input-data {
+			font-size: 20px;
+			width: 500px;
+			display: flex;
+			justify-content: space-between;
+			flex-direction: row;
+			gap: 5px;
+		}
+
+		.text-fields {
+			border-radius: 5px;
+			font-size: 17px;
+			height: 22px;
+			width: 350px;
+			margin-right: 150px;
+		}
+
+		.radio {
+			width: 40px;
+			cursor: pointer;
+			
+			
+		}
+
+		button {
+			font-family: fantasy;
+			font-size: 18px;
+			width: 150px;
+			height: 50px;
+			border-radius: 10px;
+			background-color: #ADC4CE;
+			cursor: pointer;
+			transition: 0.3s
+		}
+
+		.content-holder {
+			width: 60%;
+			height: 90%;
+			margin-left: 25px;
+			padding: 10px;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+
+		form span {
+			font-weight: 600;
+			width: 260px;
+		}
+
+		.role {
+			width: 150px;
+		}
+
+		.form-holder {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 50%;
+			height: 80%;
+		}
+
+		button:hover {
+			box-shadow: 0 0 10px 2px #000000;
+		}
+
+		nav,
+		.nav-links {
+			display: flex;
+		}
+
+		nav {
+			justify-content: space-between;
+			margin: 0px 45px 0px;
+			align-items: center;
+			height: 4vh;
+		}
+
+		.nav-links {
+			gap: 2rem;
+			list-style: none;
+			font-size: 1.5rem;
+			font-weight: 600;
+		}
+
+		a {
+			color: black;
+			text-decoration: none;
+			transition: 0.5s;
+		}
+
+		a:hover {
+			color: black;
+			text-decoration: underline;
+			text-underline-offset: 0.5rem;
+			text-decoration-color: indigo;
+		}
+
+		.logo {
+			float: left;
+			display: block;
+			font-size: 2rem;
+			font-weight: 900;
+			width: 1200px;
+		}
+
+		.logo:hover {
+			cursor: default;
+		}
+
+		form .instructions {
+			font-size: 16px;
+		}
+
+		/* CSS for error message */
+	.error-message {
+    color: red; /* Set text color to red */
+    font-weight: bold; /* Make the error message bold */
+    font-size: 0.8em; /* Initial font size */
+    position: absolute;/*  Set position to absolute */
+    top: 300px; /* Align with the top of the input box */
+    right: 400px; /* Adjust position to align with the end of the input */
+    margin-top: 2px; /* Adjust the vertical margin as needed */
+}
+
+@media screen and (max-width: 768px) {
+            .main-page {
+                flex-direction: column;
+            }
+}
+
+	</style>
+</head>
+
+<body>
+	<nav id="desktop-nav">
+		<div class="logo">LearnSphere</div>
+		<div>
+			<ul class="nav-links">
+				<li><a href="/index">Home</a></li>
+				<li><a href="#aboutus">About Us</a></li>
+				<li><a href="#contact">Contact</a></li>
+				<li><a href="/login">Login</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="main-page">
+		<div class="content-holder">
+			<h3>Benefits you receive:</h3>
+			<ul>
+				<li>
+					<h4>Comprehensive Tech Education:</h4> Discover a one-stop online platform that offers in-depth
+					training in Full Stack Development and  Software Automation Testing.
+				</li>
+
+				<li>
+					<h4>Hands-On Learning:</h4> Immerse yourself in practical, hands-on exercises and real-world
+					projects that empower you to apply your skills effectively.
+				</li>
+
+				<li>
+					<h4>Industry-Relevant Skills:</h4> Gain proficiency in three high-demand tech domains, ensuring
+					you're well-equipped for success in today's competitive job market.
+				</li>
+
+				<li>
+					<h4>Expert Instructors:</h4> Learn from experienced professionals who guide you through every step
+					of your journey to mastery.
+				</li>
+
+				<li>
+					<h4>Cutting-Edge Tools:</h4> Get hands-on experience with the latest tools, frameworks, and
+					technologies used in the industry.
+				</li>
+
+				<li>
+					<h4>Certification:</h4> Earn certificates of completion to validate your expertise and showcase your
+					accomplishments to potential employers.
+				</li>
+			</ul>
+		</div>
+		<div class="form-holder">
+
+			<form action="/addUser" method="post">
+				<div class="input-data">
+					<label>Username</label>
+					<input type="text" name="username" class="text-fields" required placeholder="FirstName LastName">
+				</div>
+				<div class="input-data">
+					<label>Email</label>
+					<input type="text" name="email" class="text-fields" required placeholder="FirstName@gmail.com">
+					<!-- Place this code wherever you want to display the error message -->
+					<div th:if="${errorMessage}" class="error-message">
+						<p th:text="${errorMessage}"></p>
+					</div>
+				</div>
+				<div class="input-data">
+					<label>Password</label>
+					<input type="password" name="password" class="text-fields" required>
+				</div>
+				<div class="input-data">
+					<label class="role">Role</label>
+					<input type="radio" name="role" class="radio" value="trainer" required>
+					<span>Trainer</span>
+					<input type="radio" name="role" class="radio" value="student" required>
+					<span>Student</span>
+				</div>
+				<button type="submit">Register</button>
+				<div class="instructions">
+					<span>Instructions:</span>
+					<ul>
+						<li>Username should be between 8-25 characters</li>
+						<li>Password should contain atleast one number and special characters</li>
+					</ul>
+				</div>
+				<a href="/login">Already an User? Login here</a>
+			</form>
+		</div>
+	</div>
+
+
+</body>
+
+</html>

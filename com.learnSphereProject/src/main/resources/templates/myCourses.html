@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>My Courses</title>
+<style>
+	
+	
+      
+	
+	body{
+		font-family: Georgia, 'Times New Roman', Times, serif;
+		height: 98vh;
+		font-size: 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		background: linear-gradient(65deg, #FAF0D7 , #ADC4CE);
+		gap: 300px;
+		}
+		table{
+			width: 700px;
+			background-color: antiquewhite;
+			font-size: 20px;
+			text-align: center;
+			box-shadow: 0 0 10px 2px black;
+		}
+		table tr{
+			height: 40px;	
+		}
+	
+nav, 
+.nav-links{
+    display: flex;
+}
+
+nav{
+    justify-content: space-around;
+    margin: 0px 45px 0px;
+    align-items: flex-start;
+    height: 2px;
+    gap: 45rem;
+}
+
+.nav-links{
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+    width: 300px;
+    font-weight: 600;
+}
+a{
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover{
+    color: black ;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-color: indigo;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: 900;
+    width: 800px;
+}
+
+.logo:hover{
+    cursor: default;
+}
+
+		
+</style>
+</head>
+<body>
+	
+	<nav id="desktop-nav">
+        <div class="logo">LearnSphere</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="/purchase">Purchase Courses</a></li>
+                <li><a href="/index">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+	
+<table class="table table-success table-striped table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Course Id</th>
+      <th scope="col">Course Name</th>
+      <th scope="col">Course Price</th>
+      <th scope="col">Lessons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="course:${courseList}">
+      <td th:text="${course.courseId}"></td>
+      <td th:text="${course.courseName}"></td>
+      <td th:text="${course.coursePrice}"></td>
+      <td>
+        <span th:each="lesson, lessonStat : ${course.lessonList}">
+		    <a th:href="@{/viewLesson(lessonId=${lesson.lessonId})}" th:text="${lesson.lessonName}"></a><span th:if="${!lessonStat.last}">, </span>
+		</span>
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+		
+</body>
+</html>

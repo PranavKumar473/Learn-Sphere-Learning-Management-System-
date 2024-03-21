@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Lesson</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<style>
+	body{
+		font-family: Georgia, 'Times New Roman', Times, serif;
+		height: 98vh;
+		font-size: 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		background: linear-gradient(65deg, #FAF0D7 , #ADC4CE);
+		gap: 100px;
+		}
+		
+		.lesson-table{
+			width: 1500px;
+			background-color: antiquewhite;
+			font-size: 20px;
+			text-align: center;
+		}
+		
+		.lesson-table td, .lesson-table th{
+			border-bottom: 2px solid black;
+		}
+		
+		.lesson-table tr{
+			height: 50px;
+		}
+		
+		.lesson-video{
+			height: 550px;
+			display: flex;
+			justify-content: center;
+		}
+		
+		.lesson-link{
+			width: 900px;
+		}
+		
+		
+		nav, 
+.nav-links{
+    display: flex;
+}
+
+nav{
+    justify-content: space-around;
+    margin: 0px 45px 0px;
+    align-items: flex-start;
+    height: 1px;
+    gap: 45rem;
+}
+
+.nav-links{
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+a{
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover{
+    color: black ;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-color: indigo;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: 900;
+    width: 800px;
+}
+
+.logo:hover{
+    cursor: default;
+}
+		
+</style>
+
+
+</head>
+<body>
+	
+	<nav id="desktop-nav">
+        <div class="logo">Learn Sphere</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="/mycourse">My Courses</a></li>
+                <li><a href="/index">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+	
+	
+    <div class="container">
+        <h2 class="mb-4">Lesson Details:</h2>
+        <table class="lesson-table">
+            <thead>
+                <tr>
+                    <th scope="col">Lesson Id</th>
+                    <th scope="col">Lesson Name</th>
+                    <th scope="col">Lesson Topics</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td th:text="${lesson.lessonId}"></td>
+                    <td th:text="${lesson.lessonName}"></td>
+                    <td th:text="${lesson.lessonTopics}"></td>
+                    
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="mt-4 mb-4">Lesson Video:</h2>
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" 
+                    th:src="'https://www.youtube.com/embed/' + ${lesson.lessonLink}" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; 
+                    encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+</body>
+</html>
